@@ -97,76 +97,89 @@ html {
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
-  }
+}
   
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
     100% { transform: rotate( 0.0deg) }
-  }
+}
 
-  /*Projects Section*/
-  #projects {
-      margin: 2rem;
-  }
+/*Projects Section*/
+#projects {
+    margin: 2rem;
+}
 
-  #projects-title {
-      width: 100%;
-      margin: 2rem auto;
-      text-align: center;
-      font-size: 3rem;
-  }
+#projects-title {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
 
-  .project-tiles {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      width: 100%;
-      margin: 0 auto;
-      max-width: 1280px;
-  }
+@media only screen and (max-width: 700px) {
+    #projects-title {
+        font-size: 1.5rem;
+    }
+}
 
-  .project-tile {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-  }
+.project-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
 
-  .container {
+@media only screen and (max-width: 700px) {
+    .project-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-tile {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container {
     position: relative;
-  }
+}
 
-  .project-image {
+.project-image {
     display: block;
     height: 100%;
     width: 100%;
     object-fit: contain;
     border: 1px solid black;
-  }
+}
 
-  .project-name {
-      padding: 1rem;
-      font-size: 1.25rem;
-      color: black;
-  }
+.project-name {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: black;
+}
 
-  .project-name > a {
-      text-decoration: none;
-  }
-  .project-name > a:hover {
-      text-decoration: underline;
-  }
+.project-name > a {
+    text-decoration: none;
+}
 
-  .project-name > a:visited {
-      color: black;
-  }
+.project-name > a:hover {
+    text-decoration: underline;
+}
 
-  .overlay {
+.project-name > a:visited {
+    color: black;
+}
+
+.overlay {
     position: absolute;
     top: 0;
     height: 100%;
@@ -177,13 +190,13 @@ html {
     border-right: 1px solid #db3e3e;
     border-left: 1px solid #db3e3e;
     object-fit: fill;
-  }
+}
   
-  .container:hover .overlay {
+.container:hover .overlay {
     opacity: 1;
-  }
-  
-  .text {
+}
+
+.text {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -191,4 +204,4 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
-  }
+}
