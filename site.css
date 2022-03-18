@@ -170,10 +170,12 @@ html {
 
 .project-name > a {
     text-decoration: none;
+    color: black;
 }
 
 .project-name > a:hover {
     text-decoration: underline;
+    color: black;
 }
 
 .project-name > a:visited {
