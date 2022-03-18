@@ -1,13 +1,15 @@
 /*Utilities*/
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Navigation*/
@@ -20,6 +22,7 @@ html{
     left: 0;
     width: 100%;
     background: white;
+    z-index: 1;
 }
 
 .navbar-list {
@@ -28,7 +31,7 @@ html{
     margin-right: 2rem;
 }
 
-.navbar-link{
+.navbar-link {
     display: block;
     padding: 1rem;
     text-decoration: none;
@@ -36,26 +39,26 @@ html{
     color: black;
 }
 
-.navbar-link:hover{
+.navbar-link:hover {
     text-decoration: underline;
 }
 
-@media only screen and ( max-width: 700px ){
-    .navbar{
+@media only screen and ( max-width: 700px ) {
+    .navbar {
         justify-content: center;
     }
 
-    .navbar-list{
+    .navbar-list {
         margin: 0 auto;
     }
 
-    .navbar-link{
+    .navbar-link {
         font-size: 1.5rem;
     }
 }
 
 /*Welcome Section*/
-#welcome-section{
+#welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,22 +72,22 @@ html{
     text-align: center;
 }
 
-#welcome-section h1{
+#welcome-section h1 {
     font-size: 6rem;
     padding: 0 1rem;
 }
 
-#welcome-section p{
+#welcome-section p {
     font-size: 3rem;
     padding: 0 1rem;
 }
 
-@media only screen and (max-width: 700px){
-    #welcome-section h1{
+@media only screen and (max-width: 700px) {
+    #welcome-section h1 {
         font-size: 4rem;
     }
 
-    #welcome-section p{
+    #welcome-section p {
         font-size: 2rem;
     }
 }
@@ -95,15 +98,111 @@ html{
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
-  }
+}
   
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
     100% { transform: rotate( 0.0deg) }
-  }
+}
+
+/*Projects Section*/
+#projects {
+    margin: 4rem 2rem;
+}
+
+#projects-title {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+    #projects-title {
+        font-size: 2.25rem;
+    }
+}
+
+.project-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+@media only screen and (max-width: 700px) {
+    .project-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-tile {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+}
+
+.project-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border: 1px solid black;
+}
+
+.project-name {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: black;
+}
+
+.project-name > a {
+    text-decoration: none;
+}
+
+.project-name > a:hover {
+    text-decoration: underline;
+}
+
+.project-name > a:visited {
+    color: black;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #db3e3e;
+    border-right: 1px solid #db3e3e;
+    border-left: 1px solid #db3e3e;
+    object-fit: fill;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
