@@ -38,9 +38,10 @@ html {
     font-size: 2rem;
     color: black;
 }
-
-.navbar-link:hover {
-    text-decoration: underline;
+@media(hover:hover) {
+    .navbar-link:hover {
+        text-decoration: underline;
+    }
 }
 
 @media only screen and ( max-width: 700px ) {
@@ -173,9 +174,11 @@ html {
     color: black;
 }
 
-.project-name > a:hover {
-    text-decoration: underline;
-    color: black;
+@media(hover:hover) {
+    .project-name > a:hover {
+        text-decoration: underline;
+        color: black;
+    }
 }
 
 .project-name > a:visited {
@@ -222,9 +225,6 @@ html {
     background-position: center;
     background-size: cover;
     height: 100vh;
-}
-
-@media only screen and (max-width: 700px) {
 }
 
 .contact-header {
@@ -291,7 +291,7 @@ html {
     margin: 20px;
 }
 
-@media only screen and (min-width: 700px) {
+@media (hover:hover) {
 
     .contact-links > .card {
         transition: transform 0.2s ease-out;
