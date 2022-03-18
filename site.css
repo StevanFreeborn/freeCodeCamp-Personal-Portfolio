@@ -208,3 +208,95 @@ html {
 }
 
 /*Contact Section*/
+
+#contact {
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/code-meet-up.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 700px) {
+}
+
+.contact-header {
+    color: white;
+    align-self: center;
+}
+
+#contact-title {
+    width: 100%;
+    font-size: 3rem;
+}
+
+#contact-subtitle {
+    font-size: 2rem;
+}
+
+.contact-links {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    #contact {
+        padding: 200px 0px;
+    }
+    .contact-links {
+        flex-direction: column;
+    }
+    #contact-title {
+        font-size: 2.25rem;
+    }
+    #contact-subtitle {
+        font-size: 1.75rem;
+    }
+}
+
+.contact-links > .card > a {
+    text-decoration: none;
+    color: black;
+    margin: 2rem;
+}
+
+.contact-links > .card i {
+    font-size: 5em;
+}
+
+.contact-links > .card > a:visited {
+    color: black;
+}
+
+.contact-links > .card > a:hover {
+    color: #db3e3e;
+    transform: scale(1.1);
+}
+
+.contact-links > .card {
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 40px 0;
+    margin: 20px;
+    transition: transform 0.2s ease-out;
+}
+
+.contact-links > .card:hover {
+    transform: scale(1.1);
+}
+
+/*Footer*/
+.footer {
+    text-align: center;
+    margin: 1rem;
+}
